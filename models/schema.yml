@@ -1,6 +1,24 @@
 version: 2
 
 models:
+  - name: cc_stock
+    columns:
+    - name: product_id
+      description: product id of stocks
+      tests:
+        - unique
+        - not_null
+    - name: product_name
+      description: name of the product
+      tests:
+        - not_null
+    - name: model_type
+      description: type of the model
+      tests:
+        - not_null
+        - accepted_values:
+            values: ['T-shirt', 'Short', 'Legging', 'Crop-top', 'Top', 'Accessories']
+
   - name: cc_sales_products
     columns:
       ### pk ###
