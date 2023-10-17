@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: cc_sales_products
+    columns:
+      ### pk ###
+    - name: product_id
+      description: the product id of cc_cales_products
+      tests:
+        - unique
+        - not_null
+    - name: qty_91
+      description: the quantity
+      tests:
+        - not_null
+    - name: avg_daily_qty_91
+      description: average daily quantity
+      tests:
+        - not_null
+    
+    
+  
